@@ -1,0 +1,41 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family: sans-serif;
+    background-color:#f5f6f7;
+    
+}
+.header{
+    text-align:center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color:#fff;
+    border-bottom: 4px solid #fdb347;
+}
+.gallery{  
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;                
+    display:flex;              /* this element has become a flex container*/
+    flex-direction:row;        /* so now the main axis is the horizental one and the vertical is the cross axis*/
+    flex-wrap: wrap;           /* making the flex elements wrap down when the width is not enaugh*/
+    justify-content: center;   /* taking each flex element to the center of the main axis*/
+    align-items: center;       /* taking each flex element to the center of the cross axis*/
+    gap: 16px;
+
+}
+.gallery img{
+    object-fit: cover;
+    width:100%;
+    max-width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.gallery::after{
+    content: "";
+    width : 350px;          /*by giving it the same value of img' width it will push the last img to the left*/
+}
